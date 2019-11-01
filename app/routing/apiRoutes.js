@@ -32,7 +32,7 @@ module.exports = function (app) {
 
     var differencesSum = 0;
 
-    var currentMinimum = 40;
+    var currentMinimum = 20;
 
     for (var i = 0; i < friendsData.length; i++) {
 
