@@ -27,10 +27,6 @@ module.exports = function (app) {
   // } //console.logs the entire friends JSON database
 
   app.post('/api/friends', function (req, res) {
-    
-    app.get("/api/friends", function (req, res) {
-      res.json(friendsData);
-    }); //closing for app.get
 
     var newFriendData = req.body;
 
