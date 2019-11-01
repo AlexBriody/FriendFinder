@@ -22,15 +22,19 @@ module.exports = function (app) {
     res.json(friendsData);
   }); //closing for app.get
 
-  for (var i = 0; i < friendsData.length; i++) {
-    console.log([i] + " friendsData: " + "\nfriend's name: " + friendsData[i].name + "\nfriend's photo: " + friendsData[i].photo + "\nfriend's scores: " + friendsData[i].scores)
-  }
+  // for (var i = 0; i < friendsData.length; i++) {
+  //   console.log([i] + " friendsData: " + "\nfriend's name: " + friendsData[i].name + "\nfriend's photo: " + friendsData[i].photo + "\nfriend's scores: " + friendsData[i].scores)
+  // } //console.logs the entire friends JSON database
 
   app.post('/api/friends', function (req, res) {
+    
+    app.get("/api/friends", function (req, res) {
+      res.json(friendsData);
+    }); //closing for app.get
 
     var newFriendData = req.body;
 
-    var currentMinimum = 40;
+    var currentMinimum = 40; //to account for the largest possible sum of differences for all 10 questions: 10 * (5-1) = 40
 
     for (var i = 0; i < friendsData.length; i++) {
 
