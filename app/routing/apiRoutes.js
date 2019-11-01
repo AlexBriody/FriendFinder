@@ -22,6 +22,10 @@ module.exports = function(app) {
     res.json(friendsData);
   }); //closing for app.get
 
+  for (var i=0; i < friendsData.length; i++) {
+  console.log("friendsData: " + "\nfriend's name: " + friendsData[i].name + "\nfriend's photo: " + friendsData[i].photo + "\nfriend's scores: " + friendsData[i].scores)
+  }
+
   app.post('/api/friends', function (req, res) {
     
 

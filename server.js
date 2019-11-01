@@ -1,7 +1,7 @@
 
 // DEPENDENCIES
-
 var express = require("express");
+var path = require('path');
 
 // Create an "express" server
 var app = express();
@@ -14,8 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //points to routes
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 //server listener
 app.listen(PORT, function() {
