@@ -30,11 +30,11 @@ module.exports = function (app) {
 
     var newFriendData = req.body;
 
-    var differencesSum = 0;
-
-    var currentMinimum = 20;
+    var currentMinimum = 40;
 
     for (var i = 0; i < friendsData.length; i++) {
+
+      var differencesSum = 0;
 
       for (var j = 0; j < newFriendData.scores[j].length; j++) {
 
